@@ -6,7 +6,7 @@
    "homepage":"https://github.com/eclabsit/rabbitmq-background-jobs",
    "keywords":[  
       "zf2",
-      "thomasvargiu/rabbitmq-module"
+      "rabbitmq-module"
    ],
    "authors":[  
       {  
