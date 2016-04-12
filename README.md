@@ -14,5 +14,5 @@ Use RabbitMQModule Configuration to set up [Connection, Consumers and Producers]
 ```php
 $this->bgJobsProducer()->publish(serialize(new MailJob()));
 ```
-MailJob MUST implements RabbitMqBackgroundJobs\Job\JobInterface
+MailJob MUST implements `RabbitMqBackgroundJobs\Job\JobInterface`
 
