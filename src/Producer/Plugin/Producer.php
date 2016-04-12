@@ -20,6 +20,11 @@ class Producer extends AbstractPlugin implements ServiceLocatorAwareInterface
     	}
     	
     	$producers = array_keys($options['producer']);
+
+        if (empty($producers)) {
+            throw new \Exception('Miss configuration');
+        }
+        
         return $this->serviceLocator->getServiceLocator()->get('rabbitmq.producer.' . $producers[0]);
     }
 }
