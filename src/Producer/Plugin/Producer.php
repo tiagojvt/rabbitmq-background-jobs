@@ -12,7 +12,7 @@ class Producer extends AbstractPlugin implements ServiceLocatorAwareInterface
     
     public function __invoke()
     { 
-    	$config = $this->serviceLocator->getServiceLocator()->get('Configuration');
+    	$config = $this->getServiceLocator()->get('Configuration');
     	$options = $config['rabbitmq'];
     	
     	if (!isset($options['producer'])) {
@@ -20,6 +20,6 @@ class Producer extends AbstractPlugin implements ServiceLocatorAwareInterface
     	}
     	
     	$producers = array_keys($options['producer']);
-        return $this->serviceLocator->getServiceLocator()->get('rabbitmq.producer.' . $producers[0]);
+        return $this->getServiceLocator()->get('rabbitmq.producer.' . $producers[0]);
     }
 }

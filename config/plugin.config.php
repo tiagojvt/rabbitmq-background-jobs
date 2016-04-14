@@ -5,7 +5,7 @@ return [
 	'factories' => [
 		'bgJobsProducer' => function (ServiceLocatorInterface $sm) {
 			$plugin = new Producer();
-			$plugin->setServiceLocator($sm);
+			$plugin->setServiceLocator($sm->serviceLocator);
 			return $plugin;
 		}
 	]
